@@ -1,22 +1,26 @@
 # laravel-integration-test
 
-Faça a integração com a API CityBikes https://api.citybik.es/v2/ para cumprir os seguintes requisitos:
+## O Desafio
 
-## 1) O usuário deverá visualizar todos disponíveis no Brasil
+Faça uma aplicação que tenha integração com a API CityBikes https://api.citybik.es/v2/ para cumprir os seguintes requisitos:
+
+### 1) Armazenar os principais dados no Banco de Dados
+
+### 2) O usuário deverá visualizar todos os pontos de disponíveis no Brasil
 Interface:  Tabela dos Pontos de Bicicletas Compartilhadas disponíveis no Brasil
 Colunas: 
   - Nome do Local
   - Localização (Cidade/País)
   - Quantidade de Bicicletas disponíveis
 
-# 2) O usuário poderá buscar por nome ou cidade
+### 3) O usuário poderá buscar por nome ou cidade
 Interface: Resultado de busca em tabela
 
-# 3) Bônus: Encontrar o local mais próximo
+### 4) Bônus: Encontrar o local mais próximo
+Interface: Resultado de busca em tabela
 
 
-Linguagem e bibliotecas para resolver o problema
-------------
+## Linguagem e bibliotecas para resolver o problema
 
   - PHP 7
   - Framework Laravel >= 5.4
@@ -25,13 +29,17 @@ Linguagem e bibliotecas para resolver o problema
   - JQuery, Vue.js, Angular2 ou React (aberto)
 
 
-# Rodando o Código
+## Rodando o Código
 - Enviar o link com os códigos ou o link do git para ser clonado
 
 - Entrar na pasta do projeto
 
 ```sh
 $ composer update
+```
+
+```sh
+$ php artisan migrate
 ```
 
 ```sh
