@@ -1,4 +1,4 @@
-# laravel-docker-integration-test
+# application-docker-integration-test
 
 ## Challenge
 
@@ -21,13 +21,13 @@ Interface: Table search results, puts only what you think necessary the user
 
 
 ## Tech
-  - Use Docker and docker-compose
-  - PHP 7
-  - Framework Laravel >= 5.4
-  - PostgreSQL >= 9.4 ou MySQL 5.x.x
-  - Bootstrap v3.x.x
-  - JQuery, Vue.js, Angular2 ou React (aberto)
-
+  - Use Docker and Docker-compose
+  - Choose your Stack:
+    - Stack PHP: Laravel framework
+    - Stack Node: Express or Adonis framework
+  - Database: PostgreSQL / MySql
+  - Front: Bootstrap v3.x.x / JQuery / Vue.js / Angular2 / React
+  
 
 ## Build and Run
 - Clone from your git or fork
