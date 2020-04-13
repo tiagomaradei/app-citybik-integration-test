@@ -1,27 +1,27 @@
-# laravel-integration-test
+# laravel-docker-integration-test
 
-## O Desafio
+## Challenge
 
-Faça uma aplicação que tenha integração com a API CityBikes https://api.citybik.es/v2/ para cumprir os seguintes requisitos:
+Make an application that has integration with the CityBikes API https://api.citybik.es/v2/ following requirements
 
-### 1) Armazenar os principais dados no Banco de Dados
+### 1) Store only the necessary data in the Database
 
-### 2) O usuário deverá visualizar todos os pontos de disponíveis no Brasil
-Interface:  Tabela dos Pontos de Bicicletas Compartilhadas disponíveis no Brasil
-Colunas: 
-  - Nome do Local
-  - Localização (Cidade/País)
-  - Quantidade de Bicicletas disponíveis
+### 2) The user can view all access points in Brazil
+Interface: Table of Shared Bicycle Points available in Brazil
+Columns:
+  - Place Name
+  - Location (City / Country)
+  - Number of Bicycles available
+  
+### 3) User can search by name or city
+Interface: Table search results, puts only what you think necessary the user
 
-### 3) O usuário poderá buscar por nome ou cidade
-Interface: Resultado de busca em tabela
-
-### 4) Bônus: Encontrar o local mais próximo
-Interface: Resultado de busca em tabela
+### 4) Bonus: Find the nearest location
+Interface: Table search results, puts only what you think necessary the user
 
 
-## Linguagem e bibliotecas para resolver o problema
-
+## Tech
+  - Use Docker and docker-compose
   - PHP 7
   - Framework Laravel >= 5.4
   - PostgreSQL >= 9.4 ou MySQL 5.x.x
@@ -29,22 +29,12 @@ Interface: Resultado de busca em tabela
   - JQuery, Vue.js, Angular2 ou React (aberto)
 
 
-## Rodando o Código
-- Enviar o link com os códigos ou o link do git para ser clonado
-
-- Entrar na pasta do projeto
+## Build and Run
+- Clone from your git or fork
 
 ```sh
-$ composer update
+$ docker-compose build
+$ docker-compose up -d
 ```
-
-```sh
-$ php artisan migrate
-```
-
-```sh
-$ php artisan serve --port=8000
-```
-
-- Acessar ```localhost:8000```
+- Access ```localhost:8000```
 
