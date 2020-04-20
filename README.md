@@ -1,4 +1,4 @@
-# application-docker-integration-test
+# application-citybik-integration-test
 
 ## Challenge
 
