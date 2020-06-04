@@ -30,7 +30,7 @@ bikesantos
 
 A instalação depende dos pacotes [docker-compose](https://docs.docker.com/compose/install/) e [yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable) instalados na máquina local.
 
-### Banco de dados:
+### Banco de dados
 ```sh
 $ cd db
 $ sudo docker-compose up --build -d
@@ -44,8 +44,7 @@ Acessível pela porta 3333.
 $ cd backend
 ```
 
-Abrir o arquivo `.env.example` e salvar como `.env`
-Feito isso rodar os comandos:
+Abrir o arquivo `.env.example` e salvar como `.env`, feito isso rodar os comandos:
 
 ```sh
 $ yarn
