@@ -1,0 +1,21 @@
+version: '2'
+services:
+  decathlon-db:
+    container_name: decathlon-db
+    image: mysql:latest
+    ports:
+      - "3307:3306"
+    networks:
+      - main-network
+    environment:
+      MYSQL_ROOT_PASSWORD: "secret"
+      MYSQL_USER: "root"
+      MYSQL_PASSWORD: "secret"
+    volumes:
+      - ./data:/var/lib/mysql
+      - ./disable_strict_mode.cnf:/etc/mysql/conf.d/disable_strict_mode.cnf
+      - ./init.sql:/usr/init.sql
+    command: --init-file /usr/init.sql
+networks:
+  main-network:
+    driver: bridge

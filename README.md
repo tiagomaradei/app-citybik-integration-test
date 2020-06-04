@@ -1,40 +1,75 @@
-# application-citybik-integration-test
+# Desafio Decathlon
 
-## Challenge
+O sistema está separado em 3 containers:
+ - **DB**: Banco de dados da aplicação em MySQL
+ - **Backend**: API da aplicação em Adonis
+ - **Frontend**: Front da aplicação em React com Typescript
 
-Make an application that has integration with the CityBikes API https://api.citybik.es/v2/ following requirements
-
-### 1) Store only the necessary data in the Database
-
-### 2) The user can view all access points in Brazil
-Interface: Table of Shared Bicycle Points available in Brazil
-Columns:
-  - Place Name
-  - Location (City / Country)
-  - Number of Bicycles available
-  
-### 3) User can search by name or city
-Interface: Table search results, puts only what you think necessary the user
-
-### 4) Bonus: Find the nearest location
-Interface: Table search results, puts only what you think necessary the user
-
-
-## Tech
-  - Use Docker and Docker-compose
-  - Choose your Stack:
-    - Stack PHP: Laravel framework
-    - Stack Node: Express or Adonis framework
-  - Database: PostgreSQL / MySql
-  - Front: Bootstrap v3.x.x / JQuery / Vue.js / Angular2 / React
-  
-
-## Build and Run
-- Clone from your git or fork
+A Base de dados da aplicação pega as informações de estações de bikes no Brasil através da API: [http://api.citybik.es/v2/networks](http://api.citybik.es/v2/networks), as rotas usadas para popular as base são:
 
 ```sh
-$ docker-compose build
-$ docker-compose up -d
+ciclosampa
+bikerecife
+bikerio
+bikesalvador
+bikepoa
+integrabike
+rivibike
+dukebike
+bikebh
+bikepetrolina
+bikebrasilia
+debikegoiania
+bicicletar
+cajubike
+bikebelem
+bikesantos
 ```
-- Access ```localhost:8000```
 
+### Instalação:
+
+A instalação depende dos pacotes [docker-compose](https://docs.docker.com/compose/install/) e [yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable) instalados na máquina local.
+
+### Banco de dados:
+```sh
+	$ cd db
+	$ sudo docker-compose up --build -d
+```
+
+### Backend 
+
+Acessível pela porta 3333.
+
+```sh
+	$ cd backend
+```
+
+Abrir o arquivo `.env.example` e salvar como `.env`
+Feito isso rodar os comandos:
+
+```sh
+  $ yarn
+  $ sudo docker-compose up --build -d
+```
+
+**Obs: Ao fazer o build o sistema roda as migrations e popula a base de dados com todas estações de bikes.**
+
+### Frontend
+
+Acessível pela porta 3000.
+
+```sh
+	cd frontend
+	yarn
+	sudo docker-compose up --build -d
+```
+
+Acessar no navegador http://localhost:3000 
+
+### Testes
+
+Para rodar os testes, executar o comando:
+
+```sh
+  $ sudo /usr/bin/docker exec -i decathlon-backend /bin/sh -c "yarn test"
+```

@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  nodejs:
+    container_name: decathlon-backend
+    build: .
+    volumes:
+      - .:/usr/app
+    ports:
+      - "3333:3333"
+    command: sh -c "yarn adonis migration:run && node populateDB.js && yarn start"
+    networks:
+      - db_main-network
+networks:
+  db_main-network:
+    external: true
