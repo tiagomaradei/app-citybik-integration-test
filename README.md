@@ -1,5 +1,3 @@
-# Desafio Decathlon
-
 O sistema está separado em 3 containers:
  - **DB**: Banco de dados da aplicação em MySQL
  - **Backend**: API da aplicação em Adonis
