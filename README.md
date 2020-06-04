@@ -31,7 +31,7 @@ A instalação depende dos pacotes [docker-compose](https://docs.docker.com/comp
 ### Banco de dados
 ```sh
 $ cd db
-$ sudo docker-compose up --build -d
+$ docker-compose up --build -d
 ```
 
 ### Backend 
@@ -46,7 +46,7 @@ Abrir o arquivo `.env.example` e salvar como `.env`, feito isso rodar os comando
 
 ```sh
 $ yarn
-$ sudo docker-compose up --build -d
+$ docker-compose up --build -d
 ```
 
 **Obs: Ao fazer o build o sistema roda as migrations e popula a base de dados com todas estações de bikes.**
@@ -58,7 +58,7 @@ Acessível pela porta 3000.
 ```sh
 $ cd frontend
 $ yarn
-$ sudo docker-compose up --build -d
+$ docker-compose up --build -d
 ```
 
 Acessar no navegador http://localhost:3000 
@@ -68,5 +68,5 @@ Acessar no navegador http://localhost:3000
 Para rodar os testes, executar o comando:
 
 ```sh
-$ sudo /usr/bin/docker exec -i decathlon-backend /bin/sh -c "yarn test"
+$ docker exec -i decathlon-backend /bin/sh -c "yarn test"
 ```
