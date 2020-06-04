@@ -3,7 +3,7 @@ O sistema está separado em 3 containers:
  - **Backend**: API da aplicação em Adonis
  - **Frontend**: Front da aplicação em React com Typescript
 
-A Base de dados da aplicação pega as informações de estações de bikes no Brasil através da API [http://api.citybik.es/v2/networks](http://api.citybik.es/v2/networks), as rotas usadas para popular as base são:
+A Base de dados da aplicação pega as informações de estações de bikes no Brasil através da API [http://api.citybik.es/v2/networks](http://api.citybik.es/v2/networks), as rotas usadas para popular a base são:
 
 ```sh
 ciclosampa
